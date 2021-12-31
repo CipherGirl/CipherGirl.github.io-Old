@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background: rgb(97, 70, 51);
+  color: #fff;
+  height: 100vh; /* Used to enable scrolling */
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  scroll-behavior: smooth;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  /* Scroll Snap */
+  scroll-snap-align: center;
+}
+
+section h1 {
+  font-size: 4rem;
+}
+
+/* Section Images */
+section#home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: url("assets/cover.jpg") no-repeat center center/cover;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section#home::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+section#about {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: url("assets/me_GHC.jpg") no-repeat center center/cover;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section#about p {
+  font-size: 1.5em;
+}
+section#about::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.foreground {
+  width: 80%;
+  max-height: 80%;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.brand {
+  font-family: "Sacramento";
+  font-size: 3.5em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.info-highlight {
+  font-size: 1.5em;
+}
+
+.info {
+  
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 0.75em;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    /* CSS Smooth Scroll */
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  section#about {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: url("assets/me_ghc.jpg") no-repeat center center/cover;
+    justify-content: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #contact p a {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-form {
+    width: 40%;
+    margin-left: 15em;
+    background-color: rgba(0, 0, 0, 0.6);
+    
+  }
+  div.contact-foreground {
+    background-color: rgba(0,0,0,0);
+  }
+  div.social{
+    width: 60%;
+    margin-left: 10em;
+  }
+}
+section#contact {
+  text-shadow: 1px 1px rgb(0, 0, 0);
+
+  background-color: rgb(58, 62, 78);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+label {
+  padding: 0.5em 0em;
+}
+a {
+  text-decoration: none;
+}
+section#contact p {
+  font-size: 1.5em;
+}
+.emailhover {
+  font-size: 120%;
+}
+@media only screen and (max-width: 767px) {
+section#experience {
+  height: 200vh;
+  padding: 2em;
+}
+}
+@media only screen and (max-width: 1080px) {
+  section#experience {
+    padding: 3em;
+  }
+  }
+.redirect a{
+font-style: bold;
+color: white;
+text-decoration: underline;
+}
+
+section#experience div div{
+  background-color: rgba(5, 5, 5, 0.159);
+  padding: 10px;
+}
+
+.input-field {
+  height: 2rem;
+  font-size: large;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 10px;
+}
+
+#submit-btn {
+  margin-top: 20px;
+  height: 34px;
+  width: auto;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+#submit-btn:hover {
+  background-color: #858585; /* Green */
+  color: white;
+  font-weight: bold;
+  transition: all .2s ease-in-out;
+}
+
+.contact-foreground {
+  width: 40rem;
+  position: relative;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+textarea { 
+  resize: none;
+  min-height: 100px;
+ }
+
